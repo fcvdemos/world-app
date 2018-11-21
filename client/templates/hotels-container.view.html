@@ -1,0 +1,27 @@
+<div class="mt-4 hotels-portfolio">
+    <div class="hotel-card" data-ng-repeat="hotel in $ctrl.hotels track by $index">
+        <div class="row">
+            <div class="col-lg-4 hotel-image">
+                <img src="/dist/assets/images/hotels/{{hotel.image}}" class="img-fluid" alt="imagen-hotel-{{hotel.name}}">
+            </div>
+            <div class="col-lg-5 hotel-data">
+                <h6>{{hotel.name}}</h6>
+                <div class="rating-container">
+                    <img data-ng-repeat="x in [].constructor(hotel.stars) track by $index"
+                         src="/dist/assets/icons/filters/star.svg"
+                         alt="star-{{$index+1}}"
+                         class="rating-star">
+                </div>
+
+                <div class="amenities-container" >
+                    <img data-ng-repeat="icon in hotel.amenities track by $index" src="/dist/assets/icons/amenities/{{icon}}.svg" alt="icon-{{icon}}">
+                </div>
+            </div>
+            <div class="col-lg-3 hotel-buying">
+                <p class="buying-text">Precio por noche por habitacion</p>
+                <p class="buying-price">ARS <strong>{{hotel.price | number:0}}</strong></p>
+                <button class="btn btn-primary buying-btn">Ver hotel</button>
+            </div>
+        </div>
+    </div>
+</div>
