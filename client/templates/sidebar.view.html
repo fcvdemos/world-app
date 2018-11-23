@@ -13,7 +13,7 @@
             {{filter}}
         </div>
         <div data-ng-if="$ctrl.filterTags.length > 0" class="clear-filters">
-            <small data-ng-click="$ctrl.clearFilters()" class="pointer">Borrar filtros</small>
+            <small data-ng-click="$ctrl.resetList()" class="pointer">Borrar filtros</small>
         </div>
     </div>
     <div id="search-bar" class="collapse">
@@ -24,8 +24,8 @@
             <div class="search-text d-inline-block">Nombre del hotel</div>
             <div class="search-collapse dropdown-toggle collapsed" data-toggle="collapse" href="#search-block" aria-expanded="false" aria-controls="searchBlock"></div>
             <div id="search-block" class="search-block input-group collapse show">
-                <input class="form-control" data-ng-model="$ctrl.hotelQuery" ng-keypress="$ctrl.checkEnter($event.keyCode,$ctrl.search)" type="text" placeholder="Ingrese el nombre del hotel">
-                <button class="btn btn-primary" data-ng-click="$ctrl.search()">Aceptar</button>
+                <input class="form-control" data-ng-model="$ctrl.hotelQuery" data-ng-keypress="$ctrl.checkEnter($event.keyCode,$ctrl.search,$ctrl.hotelQuery)" type="text" placeholder="Ingrese el nombre del hotel">
+                <button class="btn btn-primary" data-ng-click="$ctrl.search($ctrl.hotelQuery)">Aceptar</button>
             </div>
         </div>
         <div class="filters-rating shadow">
@@ -39,7 +39,7 @@
                                name="rating0"
                                value="0"
                                data-ng-model="$ctrl.rating[0]"
-                               data-ng-change="$ctrl.clearFilters()"
+                               data-ng-change="$ctrl.resetList()"
                                selected > Todas las estrellas </label>
                                <!--data-ng-disabled="$ctrl.filters.rating"-->
 

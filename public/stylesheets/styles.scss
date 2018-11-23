@@ -5,19 +5,19 @@ $color-secondary: #0679b3;
 
 @mixin header() {
   background-color: #fff;
-  width: 100%;
   color: $color-secondary;
-  padding-top: 0.5rem;
   margin-top: 0.25rem;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
 }
 
 @mixin animate-collapse() {
   display: inline-block;
   float: right;
+  font-size: 1.25rem;
   margin-right: 1rem;
   padding-top: 0.25rem;
-  font-size: 1.25rem;
 
   &.dropdown-toggle {
     transform: rotate(180deg);
@@ -31,9 +31,9 @@ $color-secondary: #0679b3;
 
 
 body {
-  margin: 0;
   background: #f3f3f3;
   box-sizing: border-box;
+  margin: 0;
 
   .navbar {
     background-color: $color-primary;
@@ -55,8 +55,8 @@ body {
   padding: 0;
 }
 .filters {
-  width: 100%;
   font-weight: 700;
+  width: 100%;
   .search-collapse {
     @include animate-collapse();
   }
@@ -65,52 +65,52 @@ body {
     padding-top: 0;
 
     &.dropdown-toggle {
+      margin-left: 5px;
+      margin-top: -4px;
       transform: rotate(180deg);
       transition: transform 0.5s linear;
-      margin-top: -4px;
-      margin-left: 5px;
+
     }
     &.collapsed {
+      margin-top: 0;
       transform: rotate(0deg);
       transition: transform 0.5s linear;
-      margin-top: 0;
     }
   }
   #search-bar {
     width: 100%;
   }
   .filters-heading {
-    width: 100%;
     background-color: #fff;
-    padding: 5px 0 5px 15px;
     display: flex;
     justify-content: center;
-
+    padding: 5px 0 5px 15px;
+    width: 100%;
     .clear-filters {
-      margin-left: 15px;
       display: inline-block;
       float: right;
+      margin-left: 15px;
     }
   }
   .filter-tag {
-    font-size: 0.75rem;
     background: $color-secondary;
-    display: inline-block;
-    padding: 1px 5px;
     border-radius: 5px;
     color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
     margin-right: 10px;
+    padding: 3px 5px;
     text-transform: capitalize;
   }
   .filters-name {
     @include header();
     .search-icon {
+      display: inline-block;
       height: 15px;
       width: 15px;
-      display: inline-block;
       img {
-        padding: 5px 15px;
         margin-bottom: 0.25rem;
+        padding: 5px 15px;
       }
     }
     .search-text {
@@ -121,9 +121,11 @@ body {
     .search-block {
       padding-bottom: 0.75rem;
       input {
+        color: #5d5d5d;
         margin: auto 1rem;
         padding: 5px;
-        color: #5d5d5d;
+        transition: transform 0.5s linear;
+
       }
       .btn {
         margin-right: 1.5rem;
@@ -133,12 +135,13 @@ body {
   .filters-rating{
     @include header();
     .rating-icon {
+      display: inline-block;
       height: 15px;
       width: 15px;
-      display: inline-block;
       img {
-        padding: 5px 15px;
         margin-bottom: 0.25rem;
+        padding: 5px 15px;
+
       }
     }
     .rating-text {
@@ -157,11 +160,11 @@ body {
         padding-bottom: 20px;
       }
       label {
-        display: block;
-        padding-left: 15px;
         color: #000;
+        display: block;
         font-size: 1rem;
         font-weight: normal;
+        padding-left: 15px;
         img{
           margin-top: -5px;
         }
@@ -177,20 +180,20 @@ body {
   @include header();
   background: #f3f3f3;
   .hotel-card {
-    margin-bottom: 20px;
     box-shadow: 0 0 5px 1px #cecece;
+    margin-bottom: 20px;
     .hotel-image {
       padding-right: 0;
       img {
-        width: 330px;
         height: 200px;
         object-fit: cover;
         padding: 10px;
+        width: 330px;
       }
     }
     .hotel-data {
-      padding-left: 25px;
       margin-bottom: 25px;
+      padding-left: 25px;
       h6 {
         font-weight: 700;
         margin-top: 0.5rem;
@@ -206,17 +209,17 @@ body {
       }
     }
     .hotel-buying {
+      align-items: center;
       border-top: 1px dashed #cccccc;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       margin: auto 25px;
       .buying-text {
-        font-size: 0.8rem;
         color: #484848;
-        margin-top: 25px;
+        font-size: 0.8rem;
         margin-bottom: 0;
+        margin-top: 25px;
       }
       .buying-price {
         color: #e16800;
@@ -227,14 +230,33 @@ body {
         }
       }
       .buying-btn{
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
         padding-left: 3rem;
         padding-right: 3rem;
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
       }
     }
   }
+  .no-hotels {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 15%;
+    padding: 30px 30px;
+    text-align: center;
+    width: 70%;
+  }
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
 }
 
 
@@ -251,11 +273,9 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
   .sidebar-container {
     padding: 0 15px;
   }
-
   .filters {
     padding-top: 1.5rem;
     .filters-heading {
@@ -277,17 +297,17 @@ body {
     .hotel-card {
       max-height: 220px;
       .hotel-data {
-        padding-left: 0;
         margin-bottom: 0;
+        padding-left: 0;
       }
       .hotel-buying {
-        border-top: 0 !important;
         border-left: 1px dashed #cccccc;
+        border-top: 0 !important;
         margin: 10px auto;
         .buying-text {
+          margin-top: 0;
           padding: 0 35px;
           text-align: center;
-          margin-top: 0;
         }
       }
     }

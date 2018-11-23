@@ -2,11 +2,12 @@
 const apiCtrl = {};
 const data = require('../../public/data/data');
 
-//GET "/"
+//GET Hotel list
 apiCtrl.getList = (req, res) => {
   res.json(data);
 };
 
+//GET Hotels by query
 apiCtrl.query = (req,res) => {
   let query = req.query;
   if (!req.query) {res.json(data)}
@@ -17,7 +18,6 @@ apiCtrl.query = (req,res) => {
   else {
     res.json(data.filter(hotel => hotel.name.toLowerCase().includes(req.query.name.toLowerCase())))
   }
-
 };
 
 module.exports = apiCtrl;

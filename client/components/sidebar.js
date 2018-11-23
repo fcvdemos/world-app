@@ -19,9 +19,9 @@ angular.module('main')
       // Returns new array for rendering checkboxes stars
       $ctrl.starsArray =  (n) => new Array(n);
       // Detects enter keypress on input
-      $ctrl.checkEnter = (keyCode, func) => {
+      $ctrl.checkEnter = (keyCode, func,nameQuery) => {
         if(keyCode == 13 && typeof func === 'function'){
-          func();
+          func(nameQuery);
         }
       };
       // Gets full hotels list
@@ -33,10 +33,9 @@ angular.module('main')
           .catch(err => console.log('Unable to perform query: ' + err))
       };
       // Query hotels list by name
-      $ctrl.search = () => {
-        let query = $ctrl.hotelQuery;
+      $ctrl.search = (nameQuery) => {
         $ctrl.clearFilters();
-        $ctrl.hotelQuery = query;
+        $ctrl.hotelQuery = nameQuery;
         if(!$ctrl.hotelQuery){
           $ctrl.processTags({});
           $ctrl.getHotelsList();
@@ -66,13 +65,16 @@ angular.module('main')
         if (filters.rating){$ctrl.filterTags =  Object.values([filters.rating + ' Estrellas']);}
         else {$ctrl.filterTags =  Object.values(filters);}
       };
-      // Clear all filters and shows full hotels list
+      // Clear all filters
       $ctrl.clearFilters = () => {
         $ctrl.hotelQuery = null;
         $ctrl.rating = {0:true};
         $ctrl.processTags({});
+      };
+      // Shows full hotels list
+      $ctrl.resetList = () => {
+        $ctrl.clearFilters();
         $ctrl.getHotelsList();
       };
-
     }
   });

@@ -6,6 +6,7 @@ const app = express.Router();
 
 /* GET home page. */
 app.get('/', AppController.helloCtrl);
+app.get('/error', AppController.errorCtrl);
 app.get('/hotels', ApiController.getList);
 app.get('/hotels/search', ApiController.query);
 

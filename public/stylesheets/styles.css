@@ -1,8 +1,8 @@
 /* Mixins */
 body {
-  margin: 0;
   background: #f3f3f3;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0; }
   body .navbar {
     background-color: #063b7e; }
     body .navbar .navbar-brand img {
@@ -17,14 +17,14 @@ body {
   padding: 0; }
 
 .filters {
-  width: 100%;
-  font-weight: 700; }
+  font-weight: 700;
+  width: 100%; }
   .filters .search-collapse {
     display: inline-block;
     float: right;
+    font-size: 1.25rem;
     margin-right: 1rem;
-    padding-top: 0.25rem;
-    font-size: 1.25rem; }
+    padding-top: 0.25rem; }
     .filters .search-collapse.dropdown-toggle {
       transform: rotate(180deg);
       transition: transform 0.5s linear; }
@@ -34,9 +34,9 @@ body {
   .filters .filters-bar {
     display: inline-block;
     float: right;
+    font-size: 1.25rem;
     margin-right: 1rem;
     padding-top: 0.25rem;
-    font-size: 1.25rem;
     padding-top: 0; }
     .filters .filters-bar.dropdown-toggle {
       transform: rotate(180deg);
@@ -45,49 +45,49 @@ body {
       transform: rotate(0deg);
       transition: transform 0.5s linear; }
     .filters .filters-bar.dropdown-toggle {
-      transform: rotate(180deg);
-      transition: transform 0.5s linear;
+      margin-left: 5px;
       margin-top: -4px;
-      margin-left: 5px; }
+      transform: rotate(180deg);
+      transition: transform 0.5s linear; }
     .filters .filters-bar.collapsed {
+      margin-top: 0;
       transform: rotate(0deg);
-      transition: transform 0.5s linear;
-      margin-top: 0; }
+      transition: transform 0.5s linear; }
   .filters #search-bar {
     width: 100%; }
   .filters .filters-heading {
-    width: 100%;
     background-color: #fff;
-    padding: 5px 0 5px 15px;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding: 5px 0 5px 15px;
+    width: 100%; }
     .filters .filters-heading .clear-filters {
-      margin-left: 15px;
       display: inline-block;
-      float: right; }
+      float: right;
+      margin-left: 15px; }
   .filters .filter-tag {
-    font-size: 0.75rem;
     background: #0679b3;
-    display: inline-block;
-    padding: 1px 5px;
     border-radius: 5px;
     color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
     margin-right: 10px;
+    padding: 3px 5px;
     text-transform: capitalize; }
   .filters .filters-name {
     background-color: #fff;
-    width: 100%;
     color: #0679b3;
-    padding-top: 0.5rem;
     margin-top: 0.25rem;
-    padding-bottom: 0.5rem; }
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 100%; }
     .filters .filters-name .search-icon {
+      display: inline-block;
       height: 15px;
-      width: 15px;
-      display: inline-block; }
+      width: 15px; }
       .filters .filters-name .search-icon img {
-        padding: 5px 15px;
-        margin-bottom: 0.25rem; }
+        margin-bottom: 0.25rem;
+        padding: 5px 15px; }
     .filters .filters-name .search-text {
       display: inline-block;
       margin-left: 1.25rem;
@@ -95,25 +95,26 @@ body {
     .filters .filters-name .search-block {
       padding-bottom: 0.75rem; }
       .filters .filters-name .search-block input {
+        color: #5d5d5d;
         margin: auto 1rem;
         padding: 5px;
-        color: #5d5d5d; }
+        transition: transform 0.5s linear; }
       .filters .filters-name .search-block .btn {
         margin-right: 1.5rem; }
   .filters .filters-rating {
     background-color: #fff;
-    width: 100%;
     color: #0679b3;
-    padding-top: 0.5rem;
     margin-top: 0.25rem;
-    padding-bottom: 0.5rem; }
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 100%; }
     .filters .filters-rating .rating-icon {
+      display: inline-block;
       height: 15px;
-      width: 15px;
-      display: inline-block; }
+      width: 15px; }
       .filters .filters-rating .rating-icon img {
-        padding: 5px 15px;
-        margin-bottom: 0.25rem; }
+        margin-bottom: 0.25rem;
+        padding: 5px 15px; }
     .filters .filters-rating .rating-text {
       display: inline-block;
       margin-left: 1.25rem;
@@ -121,9 +122,9 @@ body {
     .filters .filters-rating .rating-collapse {
       display: inline-block;
       float: right;
+      font-size: 1.25rem;
       margin-right: 1rem;
-      padding-top: 0.25rem;
-      font-size: 1.25rem; }
+      padding-top: 0.25rem; }
       .filters .filters-rating .rating-collapse.dropdown-toggle {
         transform: rotate(180deg);
         transition: transform 0.5s linear; }
@@ -135,11 +136,11 @@ body {
     .filters .filters-rating .rating-block :last-child {
       padding-bottom: 20px; }
     .filters .filters-rating .rating-block label {
-      display: block;
-      padding-left: 15px;
       color: #000;
+      display: block;
       font-size: 1rem;
-      font-weight: normal; }
+      font-weight: normal;
+      padding-left: 15px; }
       .filters .filters-rating .rating-block label img {
         margin-top: -5px; }
   .filters.shadow {
@@ -147,25 +148,25 @@ body {
 
 .hotels-portfolio {
   background-color: #fff;
-  width: 100%;
   color: #0679b3;
-  padding-top: 0.5rem;
   margin-top: 0.25rem;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
   background: #f3f3f3; }
   .hotels-portfolio .hotel-card {
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px 1px #cecece; }
+    box-shadow: 0 0 5px 1px #cecece;
+    margin-bottom: 20px; }
     .hotels-portfolio .hotel-card .hotel-image {
       padding-right: 0; }
       .hotels-portfolio .hotel-card .hotel-image img {
-        width: 330px;
         height: 200px;
         object-fit: cover;
-        padding: 10px; }
+        padding: 10px;
+        width: 330px; }
     .hotels-portfolio .hotel-card .hotel-data {
-      padding-left: 25px;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      padding-left: 25px; }
       .hotels-portfolio .hotel-card .hotel-data h6 {
         font-weight: 700;
         margin-top: 0.5rem; }
@@ -175,17 +176,17 @@ body {
         height: 20px;
         margin-right: 10px; }
     .hotels-portfolio .hotel-card .hotel-buying {
+      align-items: center;
       border-top: 1px dashed #cccccc;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       margin: auto 25px; }
       .hotels-portfolio .hotel-card .hotel-buying .buying-text {
-        font-size: 0.8rem;
         color: #484848;
-        margin-top: 25px;
-        margin-bottom: 0; }
+        font-size: 0.8rem;
+        margin-bottom: 0;
+        margin-top: 25px; }
       .hotels-portfolio .hotel-card .hotel-buying .buying-price {
         color: #e16800;
         font-size: 1.5rem;
@@ -193,11 +194,29 @@ body {
         .hotels-portfolio .hotel-card .hotel-buying .buying-price strong {
           font-size: 2rem; }
       .hotels-portfolio .hotel-card .hotel-buying .buying-btn {
-        padding-left: 3rem;
-        padding-right: 3rem;
-        font-weight: 700;
         font-size: 1.25rem;
-        margin-bottom: 1rem; }
+        font-weight: 700;
+        margin-bottom: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem; }
+  .hotels-portfolio .no-hotels {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 15%;
+    padding: 30px 30px;
+    text-align: center;
+    width: 70%; }
+
+.error {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem; }
 
 /* Override default boostrap classes */
 .btn-primary {
@@ -223,13 +242,13 @@ body {
   .hotels-portfolio .hotel-card {
     max-height: 220px; }
     .hotels-portfolio .hotel-card .hotel-data {
-      padding-left: 0;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding-left: 0; }
     .hotels-portfolio .hotel-card .hotel-buying {
-      border-top: 0 !important;
       border-left: 1px dashed #cccccc;
+      border-top: 0 !important;
       margin: 10px auto; }
       .hotels-portfolio .hotel-card .hotel-buying .buying-text {
+        margin-top: 0;
         padding: 0 35px;
-        text-align: center;
-        margin-top: 0; } }
+        text-align: center; } }

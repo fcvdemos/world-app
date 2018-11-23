@@ -3,7 +3,11 @@ const appCtrl = {};
 
 //GET "/"
 appCtrl.helloCtrl = (req, res) => {
-  res.render('index', {title: 'World Test App'});
+  res.render('index');
 };
 
+//GET "/error"
+appCtrl.errorCtrl = (req, res) => {
+  res.render('error');
+};
 module.exports = appCtrl;

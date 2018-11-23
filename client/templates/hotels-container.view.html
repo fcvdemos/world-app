@@ -1,4 +1,4 @@
-<div class="mt-4 hotels-portfolio">
+<div class="mt-4 hotels-portfolio" data-ng-if="$ctrl.hotels.length">
     <div class="hotel-card" data-ng-repeat="hotel in $ctrl.hotels track by $index">
         <div class="row">
             <div class="col-lg-4 hotel-image">
@@ -22,6 +22,14 @@
                 <p class="buying-price">ARS <strong>{{hotel.price | number:0}}</strong></p>
                 <button class="btn btn-primary buying-btn">Ver hotel</button>
             </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4 hotels-portfolio" data-ng-if="!$ctrl.hotels.length">
+    <div class="no-hotels">
+        <div class="ups">
+            <p><strong>Ups!</strong></p>
+            <p>No hay hoteles que concuerden con la busqueda</p>
         </div>
     </div>
 </div>
