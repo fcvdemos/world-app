@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "gulp build; NODE_ENV=production node ./bin/www",
+    "postinstall": "gulp build",
     "serve-dev": "NODE_ENV=development gulp serve"
   },
   "dependencies": {
