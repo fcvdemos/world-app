@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const appRoutes = require('./routes/main');
 const ejs = require('ejs');
 var compression = require('compression');
-// const error = require('./views/error.html');
 
 const app = express();
 
@@ -24,16 +23,11 @@ else {
   app.set('views', path.join(__dirname, 'views'));
 }
 
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/client', express.static(path.join(__dirname, 'client')));
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
-// app.use('/routes', express.static(path.join(__dirname, 'routes')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 

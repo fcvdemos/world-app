@@ -1,5 +1,5 @@
 /**
- * sidebar.js
+ * nav.js
  * Created by Favric for testing purposes
  */
 angular.module('main')
